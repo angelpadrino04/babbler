@@ -19,7 +19,6 @@ export function Header() {
     { href: "/caracteristicas", label: "Características" },
     { href: "/precios", label: "Precios" },
     { href: "/contacto", label: "Contacto" },
-    { href: "/prueba-gratuita", label: "Prueba Gratuita" },
   ];
 
   return (

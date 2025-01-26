@@ -11,6 +11,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import Image from "next/image";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,8 +25,8 @@ export function Header() {
   return (
     <header className="bg-white shadow-sm">
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold text-blue-600">
-          Babbler
+        <Link href="/">
+          <Image src="/icon.png" width={75} height={75} alt="Logo" />
         </Link>
         <div className="hidden md:flex space-x-4">
           {menuItems.map((item) => (
@@ -46,7 +47,7 @@ export function Header() {
               className="md:hidden"
               aria-label="Menu"
             >
-              <Menu className="h-6 w-6" />
+              <Menu size={64} />
             </Button>
           </SheetTrigger>
           <SheetContent side="right">
